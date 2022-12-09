@@ -14,7 +14,7 @@ const result = await resolveProps({
 
 console.log(result) // { hello: 'world', foo: 123 }
 
-// Return type is inferred correctly
+// Return type is inferred correctly:
 result
 // ^? { hello: string, foo: number }
 ```
@@ -22,3 +22,9 @@ result
 - Any promise-like value is awaited
 - Other values are passed through unchanged
 - The promises' return values can be a mix of different types, inference still works
+
+## Testing
+
+```sh
+> bin/test
+```
